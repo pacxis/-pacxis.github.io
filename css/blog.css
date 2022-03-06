@@ -72,8 +72,8 @@ body {
   display: flex;
   padding: 0.3rem;
   flex-flow: row wrap;
-  align-items: flex-end;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Navigation links inside the banner navbar */
@@ -84,6 +84,7 @@ body {
 
 /* Text color for links in banner navbar*/
 #banner-nav a {
+  text-decoration: none;
   color: rgb(107, 0, 0);
 }
 

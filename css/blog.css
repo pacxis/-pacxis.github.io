@@ -172,7 +172,7 @@ article img {
 
 /* Blog post itself */
 article p {
-  padding: 0.5rem 0vw;
+  padding-bottom: 0.5rem;
   text-align: justify;
   text-justify: inter-word;
 }
@@ -265,11 +265,6 @@ a:visited {
   .paragraphs {
     flex-direction: column;
     margin-top: 0;
-  }
-
-  /* Changing blog post text layout for desktop */
-  #paragraphs p {
-    padding-top: 0;
   }
 
   /* Changing blog image and text layout for desktop */

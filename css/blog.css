@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&family=Oswald:wght@300&display=swap");
+
+:root {
+  --serif-font: "Noto Serif", serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--serif-font);
+}
+
+/* Header at the top of the page */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: right;
+  padding: 2.5vw;
+  background-color: rgb(255, 199, 14);
+}
+
+/* Name at the top of the page */
+header h2 {
+  font-size: 3rem;
+}
+
+/* For styling the Tel: and Email: text in header*/
+span {
+  font-style: italic;
+  font-weight: bold;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: gainsboro;
+}
+
+/* Banner under the header */
+#banner {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-image: url("images/banner.png");
+  background-size: cover;
+  width: 95vw;
+  margin: 1rem 1.25vw 0px 1.25vw;
+  border-radius: 2rem;
+}
+
+/* Page heading inside the banner */
+#page-heading {
+  display: flex;
+  color: rgb(255, 255, 255);
+  font-weight: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 2rem;
+  order: 1;
+}
+
+/* Navbar under the page heading inside the banner */
+#banner-nav {
+  order: 2;
+}
+
+/* Navigation links inside the banner navbar */
+#banner-nav ul {
+  display: flex;
+  padding: 0.3rem;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+/* Navigation links inside the banner navbar */
+#banner-nav ul li {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+/* Text color for links in banner navbar*/
+#banner-nav a {
+  color: rgb(107, 0, 0);
+}
+
+/* Removing styling for links in navbars */
+nav a {
+  text-decoration: none;
+}
+
+/* Horizontal rule which separates main component from banner and footer */
+hr {
+  width: 95vw;
+  display: inline-block;
+  margin: 2.5vw;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 5vw;
+}
+
+/* Navbar for blog posts */
+#blog-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  order: 1;
+  padding: 0.5rem 0px;
+  width: 90vw;
+  position: sticky;
+  top: 1rem;
+  background-color: rgb(238, 160, 86);
+  border-radius: 2rem;
+}
+
+/* Link text inside the blog post navbar */
+#blog-nav a {
+  display: flex;
+  height: 3rem;
+  width: 5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+}
+
+/* Positioning blog posts under the navbar */
+#all-blogs {
+  order: 2;
+}
+
+/* Article which contains blog title, date, image and the blog post itself */
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Blog post date */
+time {
+  padding: 0px;
+  color: grey;
+}
+
+/* Blog title */
+article h3 {
+  padding-top: 2rem;
+}
+
+/* Contains image and blog post itself */
+article div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+/* Blog image */
+article img {
+  width: 40vw;
+  margin: 0px 0vw;
+  align-self: center;
+}
+
+/* Blog post itself */
+article p {
+  padding: 0.5rem 0vw;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+a:visited {
+  color: inherit;
+}
+
+/* Animation for banner navbar when link is tapped */
+#banner a:focus-within {
+  color: rgb(255, 0, 0);
+}
+
+/* Animation for banner navbar when link is tapped */
+#banner li:focus-within {
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+}
+
+/* Animation for blog navbar when link is tapped */
+#blog-nav a:focus-within {
+  color: rgb(255, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 2rem;
+}
+
+/* Media query for tablet sizing */
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  /* Page title inside banner */
+  #banner h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Links inside banner navbar */
+  #banner li a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Media query for desktop sizing */
+@media only screen and (min-width: 900px) {
+  /* Page title inside banner */
+  #banner h1 {
+    font-size: 3rem;
+  }
+
+  /* Area around the link inside navbar */
+  #banner li {
+    margin: 0 3rem;
+  }
+
+  /* Link inside the navbar */
+  #banner li a {
+    font-size: 1.5rem;
+  }
+
+  /* Animation when link inside navbar is hovered */
+  #banner li:hover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+  }
+
+  /* Link text inside the blog navbar */
+  #blog-nav a {
+    height: 3rem;
+    width: 10rem;
+  }
+
+  /* Animation when blog navbar link is hovered */
+  #blog-nav a:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  /* Animation when blog navbar link is clicked */
+  #blog-nav a:active {
+    color: red;
+  }
+
+  /* Changing blog post text layout for desktop */
+  .paragraphs {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  /* Changing blog post text layout for desktop */
+  #paragraphs p {
+    padding-top: 0;
+  }
+
+  /* Changing blog image and text layout for desktop */
+  article div {
+    flex-direction: row;
+  }
+
+  /* Changing blog image size for desktop */
+  article img {
+    width: 20vw;
+  }
+
+  /* Changing blog margins for desktop */
+  article div p {
+    margin-left: 2rem;
+  }
+}

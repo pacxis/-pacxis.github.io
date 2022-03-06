@@ -43,7 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   align-self: center;
-  background-image: url("images/banner.png");
+  background-image: url("../images/banner.png");
   background-size: cover;
   width: 95vw;
   margin: 1rem 1.25vw 0px 1.25vw;
@@ -130,6 +130,7 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 2rem;
+  color: black;
 }
 
 /* Positioning blog posts under the navbar */
@@ -186,7 +187,7 @@ footer p {
 }
 
 a:visited {
-  color: inherit;
+  color: none;
 }
 
 /* Animation for banner navbar when link is tapped */
